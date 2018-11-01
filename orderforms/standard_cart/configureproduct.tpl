@@ -6,6 +6,18 @@ var _localLang = {
     'addedToCartRemove': '{$LANG.orderForm.addedToCartRemove|escape}'
 }
 </script>
+<style>
+    #myProgress {
+        width: 100%;
+        height: 15px;
+        background-color: grey;
+    }
+    #myBar {
+        width: 1%;
+        height: 15px;
+        background-color: green;
+    }
+</style>
 
 <div id="order-standard_cart">
 
@@ -336,16 +348,20 @@ var _localLang = {
                     <div class="row" style="padding-bottom: 1.5%" >
                         <div class="col-lg-6">
                             <div class="input-group">
-                                <select class="form-control">
-                                    <option>Default select</option>
-                                    <option>Default select</option>
-                                    <option>Default select</option>
+                                <select id="select-list" class="form-control">
+
                                 </select>
                             </div>
+
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 1.5%" >
-                        <div class="col-lg-6">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <button id="select-company" type="button" class="btn btn-primary">select company</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
                             <div class="input-group">
                                 <button id="enter-new" type="button" class="btn btn-success">add new company</button>
                             </div>
@@ -407,6 +423,13 @@ var _localLang = {
                                 <input type="submit" id="btnCompleteProductConfig" class="btn btn-primary btn-lg">
 
                                 </input>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "row-progress" class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-6">
+                            <div id="myProgress">
+                                <div id="myBar"></div>
                             </div>
                         </div>
                     </div>

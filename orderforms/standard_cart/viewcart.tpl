@@ -586,3 +586,5 @@
         </form>
     </div>
 {/if}
+<script type="text/javascript" src="{$BASE_PATH_JS}/imantax.js"></script>
+

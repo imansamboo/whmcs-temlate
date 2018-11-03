@@ -440,6 +440,9 @@ var _localLang = {
         </div>
     </div>
 </div>
-<script type="text/javascript" src="{$BASE_PATH_JS}/iman.js"></script>
+
 
 <script>recalctotals();</script>
+<script type="text/javascript" src="{$BASE_PATH_JS}/iman.js"></script>
+
+

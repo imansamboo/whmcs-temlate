@@ -53,6 +53,7 @@
                                 {$LANG.promoappliedbutnodiscount}
                             </div>
                         {elseif $promoaddedsuccess}
+
                             <div class="alert alert-success text-center" role="alert">
                                 {$LANG.orderForm.promotionAccepted}
                             </div>
@@ -68,6 +69,7 @@
                                 </ul>
                             </div>
                         {/if}
+
 
                         <form method="post" action="{$smarty.server.PHP_SELF}?a=view">
 
@@ -586,5 +588,6 @@
         </form>
     </div>
 {/if}
-<script type="text/javascript" src="{$BASE_PATH_JS}/imantax.js"></script>
+{*<script type="text/javascript" src="{$BASE_PATH_JS}/imantax.js"></script>*}
+
 

@@ -4,6 +4,19 @@
     // Do not enforce state input client side
     var stateNotRequired = true;
 </script>
+<style>
+    #myProgress {
+        width: 100%;
+        height: 15px;
+        background-color: grey;
+    }
+    #myBar {
+        width: 1%;
+        height: 15px;
+        background-color: green;
+    }
+</style>
+
 {include file="orderforms/standard_cart/common.tpl"}
 <script type="text/javascript" src="{$BASE_PATH_JS}/StatesDropdown.js"></script>
 <script type="text/javascript" src="{$BASE_PATH_JS}/PasswordStrength.js"></script>
@@ -40,8 +53,104 @@
             <div class="header-lined">
                 <h1>{$LANG.orderForm.checkout}</h1>
             </div>
+            <div class="form-check">
+                {*<input class="" id="exampleCheck1" type="checkbox">*}
+                <a id="chechboxitem" type="checkbox" class="form-check-label" for="exampleCheck1">I need official Bill</a>
+            </div>
+            <div id = "select-company" class="container" >
+                <form    method="post">
+                    <div class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-9">
+                            <div class="input-group">
+                                <select id="select-list" class="form-control">
 
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-5">
+                            <div class="input-group">
+                                <button id="select-company" type="button" class="btn btn-primary">select company</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="input-group">
+                                <button id="enter-new" type="button" class="btn btn-success">add new company</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="iman" class="container" >
+                <h2  >Enter <b>Company Specification</b></h2>
+                <form   id = "imanAjax" method="post">
+                    <div class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-9">
+                            <div class="input-group">
+                              <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">username</button>
+                              </span>
+                              <input required name="user_id" type= "text" class="form-control" placeholder="Enter username">
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- /.col-lg-9 -->
+                    </div>
+                    <div class="row" style="padding-bottom: 1.5%">
+                        <div class="col-lg-9">
+                            <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Registration Number</button>
+      </span>
+                                <input required name="registration_number" type="text" class="form-control" placeholder="Enter Registration Number">
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-9 -->
+
+
+                    </div><!-- /.row -->
+                    <div class="row" style="padding-bottom: 1.5%">
+                        <div class="col-lg-9">
+                            <div class="input-group"  >
+                                <span class="input-group-addon" id="basic-addon1">Address</span>
+                                <input required type="text" class="form-control" placeholder="Address" aria-describedby="basic-addon1" name="address"   >     </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-9">
+                            <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Economical Number</button>
+      </span>
+                                <input required name="economical_number" type="text" class="form-control" placeholder="Enter Economical Number">
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-9 -->
+
+                    </div>
+                    <div class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-9">
+                            <div class="text-center">
+                                <input type="submit" id="btnCompleteProductConfig" class="btn btn-primary btn-lg">
+
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "row-progress" class="row" style="padding-bottom: 1.5%" >
+                        <div class="col-lg-9">
+                            <div id="myProgress">
+                                <div id="myBar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
+
 
         <div class="col-md-3 pull-md-left sidebar hidden-xs hidden-sm">
 
@@ -642,3 +751,4 @@
 </div>
 
 <script type="text/javascript" src="{$BASE_PATH_JS}/jquery.payment.js"></script>
+<script type="text/javascript" src="{$BASE_PATH_JS}/imanCheckFinancial.js"></script>

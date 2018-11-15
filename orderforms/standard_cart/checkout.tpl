@@ -549,8 +549,8 @@
                     <span>{$LANG.orderForm.paymentDetails}</span>
                 </div>
 
-                <div class="alert alert-success text-center large-text" role="alert">
-                    {$LANG.ordertotalduetoday}: &nbsp; <strong>{$total}</strong>
+                <div class="alert alert-success text-center large-text" id="amount" role="alert">
+                    {$LANG.ordertotalduetoday}: &nbsp; <strong id="strong">{$total}</strong>
                 </div>
 
                 {if $canUseCreditOnCheckout}
